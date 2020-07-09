@@ -14,7 +14,7 @@ branches:
 env:
   global:
   - REMOTEAPPDIR=/var/www/test.jesusamador.com/
-  - REMOTEUSER=deploy
+  - REMOTEUSER=travis
   - REMOTEHOST=161.35.235.65 # your droplet IP goes here
   - PORT=8080
 beforeinstall:
