@@ -23,6 +23,12 @@ install:
 # - npm install --only=dev
 # beforescript:
 # - chmod 600 deploy && mv deploy ~/.ssh/idrsa
+deploy:
+  skip_cleanup: true
+  provider: script
+  script: .travis/deploy.sh
+  on:
+    all_branches: true
 script:
 # - npm run build
 after_success:
