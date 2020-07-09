@@ -18,13 +18,13 @@ env:
   - REMOTEHOST=161.35.235.65 # your droplet IP goes here
   - PORT=8080
 beforeinstall:
-- npm install -g npm@^2
+# - npm install -g npm@^2
 install:
-- npm install --only=dev
+# - npm install --only=dev
 # beforescript:
 # - chmod 600 deploy && mv deploy ~/.ssh/idrsa
 script:
-- npm run build
+# - npm run build
 after_success:
 - "./scripts/deploy.sh"
 
