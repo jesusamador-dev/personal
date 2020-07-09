@@ -1,4 +1,4 @@
-language: nodeCreate public and private SSH keysjs
+language: node_js
 nodejs:
 - 12.18.1
 notifications:
