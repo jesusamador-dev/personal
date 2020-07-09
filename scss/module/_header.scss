@@ -1,0 +1,189 @@
+/* =======================
+    Estilos del header
+    =======================*/
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 0%;
+    top: 0;
+    background-color: change-color($color: $My-Color-Theme-2-hex, $alpha: .35);
+}
+
+.header {
+    width: 100%;
+    height: 80px;
+    padding-right: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $My-Color-Theme-2-hex;
+    color: $My-Color-Theme-5-hex;
+    @include respond-to('lg') {
+        background-color: $My-Color-Theme-5-hex;
+        color: $My-Color-Theme-3-hex;
+        box-shadow: 15px 0px 38px 0px rgba(0, 0, 0, 0.1);
+    }
+}
+
+.nav {
+    display: none;
+    &__brand {
+        display: block;
+    }
+    &__logo--white {
+        width: 120px;
+    }
+    &__logo--black {
+        display: none;
+    }
+    &__icon {
+        color: $My-Color-Theme-5-hex;
+        margin: 0 .1rem;
+        text-decoration: none;
+    }
+    @include respond-to('lg') {
+        height: 80px;
+        padding: 0rem 1rem;
+        display: block;
+        &__brand {
+            padding: 0 3rem;
+        }
+        &__logo--black {
+            display: block;
+            width: 120px;
+            // height: 50px;
+            // height: auto;
+        }
+        &__logo--white {
+            display: none;
+        }
+    }
+}
+
+.mobile_menu_open {
+    .navbar_container {
+        transform: translate(0%);
+        overflow: visible;
+    }
+    .overlay {
+        height: 100%;
+    }
+    .hamburger_inner {
+        span:nth-child(1) {
+            animation: ease .7s .4s span_top_45 forwards;
+        }
+        span:nth-child(2) {
+            animation: ease .7s .4s span_scaled_1 forwards;
+        }
+        span:nth-child(3) {
+            animation: ease .7s .4s burger_bottom_135 forwards;
+        }
+    }
+}
+
+.mobile_menu_close {
+    .hamburger_inner {
+        span:nth-child(1) {
+            animation: ease .7s .4s span_top_2_45 backwards;
+        }
+        span:nth-child(2) {
+            animation: ease .7s .4s span_scaled_2 backwards;
+        }
+        span:nth-child(3) {
+            animation: ease .7s .4s span_bottom_2_135 backwards;
+        }
+    }
+}
+
+.navbar_container {
+    color: $My-Color-Theme-5-hex;
+    position: fixed;
+    z-index: 999;
+    background-color: $My-Color-Theme-2-hex;
+    overflow: hidden;
+    width: calc(100% - 50px);
+    height: 100%;
+    top: 0;
+    transform: translateX(-100%);
+    transition: transform 0.45s ease-in-out;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+}
+
+.navbar {
+    display: none;
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+    @include respond-to('lg') {
+        display: flex;
+        justify-items: center;
+        &__item {
+            height: 100%;
+        }
+        &__link {
+            font-family: $font2, monospace;
+            font-size: 1.01rem;
+            color: $My-Color-Theme-3-hex;
+            text-decoration: none;
+            padding: 0 .5rem;
+        }
+    }
+}
+
+.navbar_mobile {
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    left: 0;
+    &__item {
+        display: block;
+        float: none;
+    }
+    &__link {
+        padding: .8rem 0;
+        font-family: $font2, monospace;
+        font-size: 1.3rem;
+        color: $My-Color-Theme-5-hex;
+        text-decoration: none;
+        display: block;
+    }
+}
+
+.hamburger_box {
+    padding: 20px;
+    cursor: pointer;
+    .hamburger_inner {
+        width: 20px;
+        line-height: 0;
+        span {
+            display: inline-block;
+            position: relative;
+            width: 20px;
+            height: 2px;
+            vertical-align: top;
+            background: currentColor;
+        }
+        span+span {
+            margin-top: 5px;
+        }
+    }
+    @include respond-to('lg') {
+        display: none;
+    }
+}
+
+.hamburger_close {
+    position: absolute;
+    top: 54px;
+    right: -50px;
+}
