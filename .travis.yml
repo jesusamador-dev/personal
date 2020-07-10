@@ -14,7 +14,7 @@ branches:
 env:
   global:
   - REMOTEAPPDIR=/var/www/test.jesusamador.com/html/
-  - REMOTEUSER=deploy
+  - REMOTEUSER=travis
   - REMOTEHOST=161.35.235.65
   - PORT=8080
 beforeinstall:
