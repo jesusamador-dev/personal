@@ -20,12 +20,12 @@ env:
 before_install:
 - openssl aes-256-cbc -K $encrypted_0ddd2445e49f_key -iv $encrypted_0ddd2445e49f_iv
   -in travis_rsa.enc -out travis_rsa -d
-install:
-# - npm install --only=dev
+- chmod 600 travis_rsa
+- mv travis_rsa ~/.ssh/id_rsa
+install: 
 beforescript:
 - chmod 600 travis_rsa
 - mv travis_rsa ~/.ssh/id_rsa
 script: 
 after_success:
 - "./scripts/deploy.sh"
-
