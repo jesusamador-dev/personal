@@ -23,7 +23,6 @@ before_install:
 install:
 # - npm install --only=dev
 beforescript:
-- ls -l
 - chmod 600 travis_rsa
 - mv travis_rsa ~/.ssh/id_rsa
 script: 
