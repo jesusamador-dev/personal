@@ -3,5 +3,5 @@ set -x
 base=$(basename $PWD) && \
 cd .. && \
 tar -czf package.tgz $base && \
-scp package.tgz $REMOTE_USER@$REMOTE_HOST:$REMOTE_APP_DIR && \
-ssh $REMOTE_USER@$REMOTE_HOST 'bash -s' < ./scripts/untar.sh
+scp package.tgz $REMOTEUSER@$REMOTEHOST:$REMOTEAPPDIR && \
+ssh $REMOTEUSER@$REMOTEHOST 'bash -s' < ./scripts/untar.sh
