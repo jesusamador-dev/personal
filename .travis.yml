@@ -17,11 +17,12 @@ env:
   - REMOTEUSER=travis
   - REMOTEHOST=161.35.235.65
   - PORT=8080
+  # - secure: g3IF9sKt7j/zWDltuayaihNfqGRnaWv3d29IchdKauJfZ9qvnmot0Gy9cr6ApjSriXS9elNiHlXqu0kj7L707oPmoRM1xAYH2+UxOxsaa1K1NGKU3PqB4qsaTPOe9Hm1puO3IdJtqkkp1VIi8ONGDuI64ISi60GxQE5Is0wNXEIw6MLmFJ6Q309a7qimPxK1JBupF0rw3PqDq8HqdyAPV16Tbat5P7AhH2voWG5KWg3vDrQ5fjGXpIkCg3T2zpkHgbKh/RAUGdr2W4HkaJq3Ap6Md2TQxN6PU7lsyis1ufgxSqDEkg7sxm37y2ab42pNqtvu22wEqZ40ogBl5R8xpqcj/FziSNWUP8HS9oT1ko0Qoh4XGtb18HQ4O4WGEAUSuDaMXAevfst33laqpjO6nSNVX6ao+5Wbh6Pyi/tSnD3mwzqyvGpq5s94QoT0L5HfNT9yd7t1PBr210tGA70ZJfCJGhxq8j4+CKTpFus3sHYKiyk4F87BblPw/F38Ijl3mmJzPfs9VsgQ8JSgxPUzpCalBAJ9ZoKYk5zYiTXaEb3qjiZgUDeQ10vuVkyh2aiQgfprxrQjVMfpJNo4th4ld+m70LYHzLCJtemfnvPNtyUQ93BRHfb9SdwZwLfIXoomSHI3Ij0c+Swd8HzJa3VXOhjQIGfkQ3cAKaWHGByFDdA=
 before_install:
-# - openssl aes-256-cbc -K $encrypted_0ddd2445e49f_key -iv $encrypted_0ddd2445e49f_iv
+- openssl aes-256-cbc -K $encrypted_0ddd2445e49f_key -iv $encrypted_0ddd2445e49f_iv -in travis_rsa.enc -out travis_rsa -d
 #   -in travis_rsa.enc -out travis_rsa -d
-# - chmod 600 travis_rsa
-# - mv travis_rsa ~/.ssh/id_rsa
+- chmod 600 travis_rsa
+- mv travis_rsa ~/.ssh/id_rsa
 install: 
 beforescript:
 # - chmod 600 travis_rsa
