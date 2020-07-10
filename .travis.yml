@@ -24,7 +24,7 @@ install:
 before_script:
 # - chmod 600 travis && mv travis ~/.ssh/idrsa
 script: 
-- npm run build
+# - npm run build
   after_success:
 - "./scripts/deploy.sh"
 before_install:

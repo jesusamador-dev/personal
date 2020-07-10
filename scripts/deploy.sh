@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
 set -x
-tar -czf package.tgz build && \
+tar -czf package.tgz ./ && \
 scp package.tgz $REMOTE_USER@$REMOTE_HOST:$REMOTE_APP_DIR && \
 ssh $REMOTE_USER@$REMOTE_HOST 'bash -s' < ./scripts/untar.sh
