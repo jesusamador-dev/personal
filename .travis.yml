@@ -3,8 +3,8 @@ node_js:
 - 12.18.1
 notifications:
   email:
-    onfailure: change
-    onsuccess: change
+    on_failure: change
+    on_success: change
 addons:
   ssh_known_hosts:
   - 161.35.235.65
@@ -17,7 +17,7 @@ env:
   - REMOTEUSER=travis
   - REMOTEHOST=161.35.235.65
   - PORT=8080
-before_install:
+# before_install:
 # - npm install -g npm@^2
 install:
 # - npm install --only=dev
