@@ -1,12 +1,12 @@
 language: node_js
-node_js:
+nodejs:
 - 12.18.1
 notifications:
   email:
-    on_failure: change
-    on_success: change
+    onfailure: change
+    onsuccess: change
 addons:
-  ssh_known_hosts:
+  sshknownhosts:
   - 161.35.235.65
 branches:
   only:
@@ -17,14 +17,13 @@ env:
   - REMOTEUSER=travis
   - REMOTEHOST=161.35.235.65
   - PORT=8080
-# before_install:
+beforeinstall:
 # - npm install -g npm@^2
 install:
 # - npm install --only=dev
-before_script:
+beforescript:
 # - chmod 600 travis && mv travis ~/.ssh/idrsa
 script: 
-# - npm run build
 after_success:
 - "./scripts/deploy.sh"
 before_install:
