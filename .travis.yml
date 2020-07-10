@@ -22,7 +22,7 @@ beforeinstall:
 install:
 # - npm install --only=dev
 beforescript:
-- chmod 600 travis && mv travis ~/.ssh/idrsa
+- chmod 600 dploy && mv deploy ~/.ssh/idrsa
 script: 
 after_success:
 - "./scripts/deploy.sh"
