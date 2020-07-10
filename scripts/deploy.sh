@@ -4,4 +4,4 @@ base=$(basename $PWD) && \
 cd .. && \
 tar -czf package.tgz $base && \
 scp package.tgz $REMOTEUSER@$REMOTEHOST:$REMOTEAPPDIR && \
-ssh $REMOTEUSER@$REMOTEHOST 'bash -s' < ./scripts/untar.sh
+ssh $REMOTEUSER@$REMOTEHOST 'bash -s' < ./untar.sh
