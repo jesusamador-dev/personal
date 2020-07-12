@@ -6,65 +6,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi web Personal</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
-
-    <link rel="stylesheet" href="./css/styles.css">
-
+    <link rel="stylesheet" href="./dist/css/styles.min.css">
 </head>
 
 <body id="body" class="mobile_menu_close">
     <div class="overlay"></div>
-
     <header class="header">
-        <div class="hamburger_box">
-            <div class="hamburger_inner">
-                <span></span>
-                <span></span>
-                <span></span>
+        <div class="navbar_container">
+            <div class="hamburger_box">
+                <div class="hamburger_inner">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="nav__brand">
+                <img class="nav__logo--white" src="./img/logo_white.svg" alt="Logotipo Jesús Amador">
+                <img class="nav__logo--black" src="./img/logo_jesus.svg" alt="Logotipo Jesús Amador">
+            </div>
+            <div class="delimitter"></div>
+            <nav class="nav">
+                <ul class="navbar">
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="">
+                            <span>Inicio</span>
+                        </a>
+                    </li>
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="">
+                            <span>Acerca de mi</span>
+                        </a>
+                    </li>
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="">
+                            <span>Proyectos</span>
+                        </a>
+                    </li>
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="">
+                            <span>Blog</span>
+                        </a>
+                    </li>
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="">
+                            <span>Contacto</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="delimitter"></div>
+            <div class="nav__redes_sociales">
+                <a class="nav__icon" href="https://www.instagram.com/jesusamador_dev/" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a class="nav__icon" href="https://twitter.com/jesusamador_dev" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a class="nav__icon" href="https://www.linkedin.com/in/jes%C3%BAs-guadalupe-macias-amador/" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a class="nav__icon" href="https://github.com/jesusamador-dev" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
             </div>
         </div>
-        <div class="nav__brand">
-            <img class="nav__logo--white" src="./img/logo_white.svg" alt="Logotipo Jesús Amador">
-            <img class="nav__logo--black" src="./img/logo_jesus.svg" alt="Logotipo Jesús Amador">
-        </div>
-        <nav class="nav">
-            <ul class="navbar">
-                <li class="navbar__item">
-                    <a class="navbar__link" href="">
-                        <span>Inicio</span>
-                    </a>
-                </li>
-                <li class="navbar__item">
-                    <a class="navbar__link" href="">
-                        <span>Acerca de</span>
-                    </a>
-                </li>
-                <li class="navbar__item">
-                    <a class="navbar__link" href="">
-                        <span>Portafolio</span>
-                    </a>
-                </li>
-                <li class="navbar__item">
-                    <a class="navbar__link" href="">
-                        <span>Contacto</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-        <div class="nav__redes_sociales">
-            <a class="nav__icon" href="https://www.instagram.com/jesusamador_dev/" target="_blank">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a class="nav__icon" href="https://twitter.com/jesusamador_dev" target="_blank">
-                <i class="fab fa-twitter"></i>
-            </a>
-            <a class="nav__icon" href="https://www.linkedin.com/in/jes%C3%BAs-guadalupe-macias-amador/" target="_blank">
-                <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a class="nav__icon" href="https://github.com/jesusamador-dev" target="_blank">
-                <i class="fab fa-github"></i>
-            </a>
-        </div>
-        <nav class="navbar_container">
+        <nav class="navbar_container_mobile">
             <div class="hamburger_close">
                 <div class="hamburger_box">
                     <div class="hamburger_inner">
@@ -94,7 +100,7 @@
 
     <script>
         const hamburgerButtons = document.querySelectorAll('.hamburger_box');
-        class HamburguerMenu {
+        class HamburgerMenu {
             constructor(body) {
                 this.body = document.getElementById(body);
             }
@@ -104,7 +110,7 @@
             }
         }
 
-        const hamburger = new HamburguerMenu("body");
+        const hamburger = new HamburgerMenu("body");
         hamburgerButtons.forEach(element => {
             element.addEventListener('click', (event) => {
                 hamburger.toggle();
