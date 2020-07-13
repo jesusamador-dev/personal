@@ -47,7 +47,6 @@
         padding: 0rem 1rem;
         display: block;
         &__brand {
-            // padding: 0 3rem;
             width: 15%;
         }
         &__logo--black {
@@ -183,6 +182,28 @@
             height: 100%;
             display: flex;
             align-items: center;
+            &>span {
+                position: relative;
+            }
+            &>span::after {
+                background-color: change-color($color: $My-Color-Theme-1-hex, $alpha: .8);
+                content: '';
+                position: absolute;
+                left: -5px;
+                bottom: 0.4em;
+                width: 0;
+                height: 6px;
+                transition: 0.2s 0.2s;
+            }
+            &:hover {
+                span::after {
+                    width: calc(100% + 10px);
+                }
+            }
+        }
+        &__text {
+            position: relative;
+            z-index: 1;
         }
     }
 }
