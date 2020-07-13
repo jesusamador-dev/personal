@@ -4,7 +4,7 @@ export NODE_ENV=production
 export NVM_BIN=$HOME/.nvm/versions/node/v12.18.1/bin
 cd /var/www/test.jesusamador.com/html/ && \
 tar zxvf package.tgz -C . && \
-mv personal/* /var/www/test.jesusamador.com/html && \
+rsync -a personal/ /var/www/test.jesusamador.com/html && \
 # mv build/package.json . && \
 npm install
 # && \
