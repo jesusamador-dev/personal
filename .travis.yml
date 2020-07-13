@@ -13,7 +13,7 @@ branches:
   - master
 env:
   global:
-  - REMOTEAPPDIR=/var/www/test.jesusamador.com/html/
+  - REMOTEAPPDIR=/var/www/test.jesusamador.com/
   - REMOTEUSER=travis
   - REMOTEHOST=161.35.235.65
   - PORT=8080
