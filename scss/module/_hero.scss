@@ -42,7 +42,11 @@
 
 main {
     background-image: url(../../img/back_hero.svg);
-    background-position: center;
-    background-size: cover;
+    background-position: top;
+    background-size: contain;
     background-repeat: no-repeat;
+    @include respond-to(lg) {
+        background-position: center;
+        background-size: cover;
+    }
 }
