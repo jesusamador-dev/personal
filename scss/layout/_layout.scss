@@ -14,10 +14,13 @@
     grid-template-columns: 1fr;
     column-gap: 2rem;
     padding: 2rem 0;
-    min-height: calc(100vh - 80px);
     justify-content: center;
     align-items: center;
-    @include respond-to(lg) {
+    height: auto;
+    @include respond-to(md) {
         grid-template-columns: 1fr 1fr;
+    }
+    @include respond-to(lg) {
+        min-height: calc(100vh - 80px);
     }
 }

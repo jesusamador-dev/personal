@@ -1,0 +1,12 @@
+.btn {
+    display: block;
+    font-family: $font1;
+    padding: 1rem 2.3rem;
+    text-decoration: none;
+    letter-spacing: 0;
+    border-radius: 5px;
+    &__cv {
+        background-color: $My-Color-Theme-1-hex;
+        color: $My-Color-Theme-5-hex;
+    }
+}
