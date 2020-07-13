@@ -1,0 +1,48 @@
+.hero {
+    &__image {
+        grid-row-start: 1;
+        grid-row-end: 2;
+        padding: 0;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    &__content {
+        grid-row-start: 2;
+        font-family: $font2, monospace;
+        line-height: 1.4;
+        letter-spacing: 0.07rem;
+    }
+    &__title {
+        color: $My-Color-Theme-3-hex;
+        margin: 0;
+    }
+    &__subtitle {
+        color: $My-Color-Theme-1-hex;
+    }
+    @include respond-to(lg) {
+        &__image {
+            grid-column: 2;
+            padding: 0 3.5rem;
+        }
+        &__content {
+            font-family: $font2, monospace;
+        }
+        &__title {
+            color: $My-Color-Theme-3-hex;
+            font-size: 2.7rem;
+        }
+        &__subtitle {
+            color: $My-Color-Theme-1-hex;
+            font-size: 2.5rem;
+        }
+    }
+}
+
+main {
+    background-image: url(../../img/back_hero.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}

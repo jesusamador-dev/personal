@@ -1,0 +1,23 @@
+.container {
+    max-width: 1300px;
+    width: 90%;
+    display: grid;
+    margin: 0 auto;
+}
+
+
+/* =======================
+    Estilos del hero
+    =======================*/
+
+.hero {
+    grid-template-columns: 1fr;
+    column-gap: 2rem;
+    padding: 2rem 0;
+    min-height: calc(100vh - 80px);
+    justify-content: center;
+    align-items: center;
+    @include respond-to(lg) {
+        grid-template-columns: 1fr 1fr;
+    }
+}
