@@ -16,18 +16,11 @@
     }
     &__title {
         color: $My-Color-Theme-3-hex;
-        margin: 0;
-        border-right: 2px solid rgba(0, 0, 0, 0.75);
-        white-space: nowrap;
-        overflow: hidden;
-        transform: translateY(-50%);
+        margin: 1rem;
     }
     &__subtitle {
         color: $My-Color-Theme-1-hex;
         margin-bottom: 1.4rem;
-        white-space: nowrap;
-        overflow: hidden;
-        transform: translateY(-50%);
     }
     &__contact {
         display: flex;
@@ -39,6 +32,9 @@
         font-family: $font1;
         color: $My-Color-Theme-6-hex;
         letter-spacing: 0;
+    }
+    &__email {
+        margin-bottom: 1rem;
     }
     &__email,
     &__github {

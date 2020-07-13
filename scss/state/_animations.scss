@@ -82,25 +82,3 @@
         transform: rotate(0);
     }
 }
-
-@keyframes typewriter {
-    from {
-        width: 0;
-    }
-    to {
-        width: 100%;
-    }
-}
-
-@keyframes blinkTextCursor {
-    from {
-        border-right-color: rgba(255, 255, 255, 0.75);
-    }
-    to {
-        border-right-color: transparent;
-    }
-}
-
-.anim-typewriter {
-    animation: typewriter 4s steps(36) 1s 1 normal both, blinkTextCursor 500ms steps(36) 1s 1 normal both;
-}
