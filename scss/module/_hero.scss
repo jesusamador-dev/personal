@@ -15,11 +15,13 @@
         letter-spacing: 0.07rem;
     }
     &__title {
+        font-size: 1.3rem;
         color: $My-Color-Theme-3-hex;
-        margin: 1rem;
+        margin-bottom: 1rem;
     }
     &__subtitle {
         color: $My-Color-Theme-1-hex;
+        font-size: 1.2rem;
         margin-bottom: 1.4rem;
     }
     &__contact {
@@ -83,11 +85,12 @@
 }
 
 main {
-    background-image: url(../../img/back_hero.svg);
+    background-image: url(../../img/background_movil2.svg);
     background-position: top;
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     @include respond-to(lg) {
+        background-image: url(../../img/back_hero.svg);
         background-position: center;
         background-size: cover;
     }
