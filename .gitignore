@@ -1,2 +1,3 @@
 .vscode
 travis_rsa.pub
+node_modules/

@@ -7,9 +7,12 @@
     <title>Mi web Personal</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
     <link rel="stylesheet" href="./dist/css/styles.min.css">
+    <link rel="stylesheet" href="./node_modules/animate.css/animate.min.css">
+
 </head>
 
 <body id="body" class="mobile_menu_close">
+
     <div class="overlay"></div>
     <header class="header">
         <div class="navbar_container">
@@ -108,51 +111,51 @@
         </nav>
     </header>
     <main>
-        <section class="container hero">
-            <div class="hero__content">
-                <h1 class="hero__title anim-typewriter">Hey! Soy Jesús Amador</h1>
-                <h2 class="hero__subtitle anim-typewriter">Desarrollador Web</h2>
-                <p class="hero__text">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste, numquam, at mollitia dolor earum ad quas
-                </p>
-                <div class="hero__contact">
-                    <div class="hero__email">
-                        <p>Email:</p>
-                        <a href="mailto:jesus.macias.amador@gmail.com">jesus.macias.amador@gmail.com</a>
+        <div class="main_hero">
+            <section class="container hero">
+                <div class="hero__content">
+                    <h1 class="hero__title">Hey! Soy Jesús Amador</h1>
+                    <h2 class="hero__subtitle">Desarrollador Web</h2>
+                    <p class="hero__text">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste, numquam, at mollitia dolor earum ad quas
+                    </p>
+                    <div class="hero__contact">
+                        <div class="hero__email">
+                            <p>Email:</p>
+                            <a href="mailto:jesus.macias.amador@gmail.com">jesus.macias.amador@gmail.com</a>
+                        </div>
+                        <div class="hero__github">
+                            <p>Github</p>
+                            <a href="https://github.com/jesusamador-dev">github.com/jesusamador-dev</a>
+                        </div>
                     </div>
-                    <div class="hero__github">
-                        <p>Github</p>
-                        <a href="https://github.com/jesusamador-dev">github.com/jesusamador-dev</a>
+                    <div class="hero__buttons">
+                        <a class="btn btn__cv" href="#">Descargar CV</a>
                     </div>
                 </div>
-                <div class="hero__buttons">
-                    <a class="btn btn__cv" href="#">Descargar CV</a>
+                <div class="hero__image">
+                    <img src="./img/image_1.svg" class="" alt="Imagen de un persona sentada sobre un escritorio" srcset="">
                 </div>
-            </div>
-            <div class="hero__image">
-                <img src="./img/image_1.svg" alt="Imagen de un persona sentada sobre un escritorio" srcset="">
-            </div>
-        </section>
+            </section>
+        </div>
+        <div class="main_about">
+            <section class="container about">
+                <div class="about__image">
+                    <img src="./img/undraw_on_the_office_fbfs.svg" alt="">
+                </div>
+                <div class="about__content">
+                    <h2 class="about__title">Acerca de mi</h2>
+                    <div class="about__text">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea commodi deserunt doloremque nam laudantium aliquid aperiam odio quam cupiditate odit adipisci, dolor suscipit ut, distinctio eos et eligendi, quaerat placeat?
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
-    <script>
-        const hamburgerButtons = document.querySelectorAll('.hamburger_box');
-        class HamburgerMenu {
-            constructor(body) {
-                this.body = document.getElementById(body);
-            }
-            toggle() {
-                this.body.classList.toggle('mobile_menu_open')
-                this.body.classList.toggle('mobile_menu_close')
-            }
-        }
-
-        const hamburger = new HamburgerMenu("body");
-        hamburgerButtons.forEach(element => {
-            element.addEventListener('click', (event) => {
-                hamburger.toggle();
-            })
-        });
-    </script>
+    <script src="./js/hamburgerMenu.js"></script>
+    <script src="./js/animations.js"></script>
 </body>
 
 </html>
