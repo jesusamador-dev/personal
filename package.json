@@ -1,13 +1,14 @@
 {
-    "name": "AmadorPage",
+    "name": "amador-page",
     "version": "1.0.0",
-    "description": "",
+    "description": "Es mi sitio web personal",
     "main": "index.html",
     "scripts": {},
     "keywords": [],
-    "author": "",
+    "author": "Jesús Amador <jesus.macias.amador@gmail.com>",
     "license": "ISC",
     "dependencies": {
-        "animate.css": "^4.1.0"
+        "animate.css": "^4.1.0",
+        "aos": "^3.0.0-beta.6"
     }
 }

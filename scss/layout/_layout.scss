@@ -22,3 +22,21 @@
         min-height: calc(100vh - 80px);
     }
 }
+
+
+/* =======================
+    Estilos del about
+    =======================*/
+
+.about {
+    grid-template-columns: 1fr;
+    column-gap: 2rem;
+    padding: 3rem 0;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    @include respond-to(lg) {
+        grid-template-columns: 1fr 1fr;
+        min-height: 100vh;
+    }
+}

@@ -11,18 +11,17 @@
     &__content {
         grid-row-start: 2;
         font-family: $font2, monospace;
-        line-height: 1.2;
         letter-spacing: 0.07rem;
     }
     &__title {
-        font-size: 1.4rem;
+        font-size: 1.5rem;
         color: $My-Color-Theme-3-hex;
-        margin-bottom: 1rem;
+        margin: 0 0 .5rem;
     }
     &__subtitle {
         color: $My-Color-Theme-1-hex;
-        font-size: 1.3rem;
-        margin-bottom: 1.4rem;
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
     }
     &__contact {
         display: flex;
@@ -72,6 +71,7 @@
         &__content {
             grid-column: 1;
             grid-row: 1;
+            line-height: 1.2;
         }
     }
     @include respond-to(xl) {
