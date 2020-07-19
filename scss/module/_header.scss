@@ -59,9 +59,13 @@
         &__icon {
             color: $My-Color-Theme-3-hex;
             border: 1px $My-Color-Theme-4-hex solid;
-            font-size: .85rem;
-            padding: .3rem;
-            margin: 0 .4rem;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            margin: 0 .2rem;
             border-radius: 50%;
             display: flex;
             transition: all 0.3s ease-out;

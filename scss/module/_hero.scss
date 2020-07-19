@@ -95,7 +95,7 @@
     overflow: hidden;
     @include respond-to(lg) {
         background-image: url(../../img/back_hero.svg);
-        background-position: center;
+        background-position: 0% 100%;
         background-size: cover;
     }
 }
