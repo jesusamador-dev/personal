@@ -3,24 +3,20 @@
         grid-row-start: 1;
         grid-row-end: 2;
         padding: 0 2rem;
-        img {
-            max-width: 100%;
-            height: auto;
-        }
     }
     &__content {
         grid-row-start: 2;
         font-family: $font2, monospace;
-        letter-spacing: 0.07rem;
+        letter-spacing: .04rem;
     }
     &__title {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
         color: $My-Color-Theme-3-hex;
         margin: 0 0 .5rem;
     }
     &__subtitle {
         color: $My-Color-Theme-1-hex;
-        font-size: 1.4rem;
+        font-size: 1.3rem;
         margin-bottom: 1rem;
     }
     &__contact {
